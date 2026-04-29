@@ -9,7 +9,8 @@
   },
   "main": "./extension.js",
   "activationEvents": [
-    "onStartupFinished"
+    "onLanguage:latex",
+    "onLanguage:tex"
   ],
   "scripts": {}
 }
