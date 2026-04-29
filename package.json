@@ -2,9 +2,9 @@
   "name": "cursor-latex-synctex-statusbar",
   "displayName": "LaTeX Workshop Synctex StatusBar",
   "description": "Adds a Status Bar button for LaTeX Workshop SyncTeX (from cursor).",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "publisher": "zpz",
-  "icon": "icon.svg",
+  "icon": "icon.png",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -27,8 +27,7 @@
   "main": "./extension.js",
   "activationEvents": [
     "onLanguage:latex",
-    "onLanguage:tex",
-    "onCommand:cursor-latex-synctex-statusbar.synctex"
+    "onLanguage:tex"
   ],
   "contributes": {
     "commands": [
@@ -37,6 +36,19 @@
         "title": "LaTeX Workshop: SyncTeX from cursor",
         "category": "LaTeX"
       }
+    ],
+    "configuration": [
+      {
+        "title": "LaTeX Workshop SyncTeX StatusBar",
+        "properties": {
+          "cursor-latex-synctex-statusbar.language": {
+            "type": "string",
+            "enum": ["zh", "en", "auto"],
+            "default": "auto",
+            "description": "Language for the status bar tooltip and messages. Default follows the VS Code UI language."
+          }
+        }
+      }
     ]
   },
   "files": [
@@ -44,7 +56,7 @@
     "package.json",
     "README.md",
     "LICENSE",
-    "icon.svg"
+    "icon.png"
   ],
   "scripts": {
     "package": "vsce package"

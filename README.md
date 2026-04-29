@@ -22,3 +22,30 @@
 ## 发布说明
 项目已补齐 `package.json` 中用于公开发布的元信息（`repository` / `license` / `icon` / `contributes` / `files` 等），并提供 `vsce package` 用于生成发行用 `.vsix`。
 
+提示语言可以在设置里切换：
+
+`cursor-latex-synctex-statusbar.language`（默认：`auto`）
+- `zh`：中文
+- `en`：英文
+- `auto`：跟随 VS Code 界面语言
+
+## English
+
+### What it does
+- Adds a status bar button (`J`) for triggering LaTeX Workshop SyncTeX.
+- The button is only shown when the active editor is a `.tex` / LaTeX file.
+- Click the button to run `latex-workshop.synctex`.
+- If LaTeX Workshop is not installed (`James-Yu.latex-workshop`), clicking the button will prompt you and provide a link to install it.
+
+### Language
+
+You can switch tooltip/message language via settings:
+
+`cursor-latex-synctex-statusbar.language` (default: `auto`)
+- `zh`: Chinese
+- `en`: English
+- `auto`: follow VS Code UI language (English vs others)
+
+### Publishing
+The project is normalized for public publishing via `package.json` metadata (including `repository` / `license` / `icon` / `contributes` / `files`) and supports building the distributable `.vsix` using `vsce package`.
+
