@@ -6,7 +6,7 @@ const vscode = require("vscode");
  */
 function activate(context) {
   // Lower priority moves it towards the right within the left-aligned group.
-  const item = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, -1000);
+  const item = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, -100000);
   item.text = "J";
   item.tooltip = "LaTeX Workshop: 从光标同步SyncTex";
 
