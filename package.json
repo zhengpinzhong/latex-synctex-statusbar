@@ -11,6 +11,9 @@
     "url": "https://github.com/zhengpinzhong/latex-synctex-statusbar.git"
   },
   "homepage": "https://github.com/zhengpinzhong/latex-synctex-statusbar",
+  "bugs": {
+    "url": "https://github.com/zhengpinzhong/latex-synctex-statusbar/issues"
+  },
   "categories": [
     "Other"
   ],
@@ -55,6 +58,7 @@
     "extension.js",
     "package.json",
     "README.md",
+    "CHANGELOG.md",
     "LICENSE",
     "icon.png"
   ],
