@@ -5,7 +5,8 @@ const vscode = require("vscode");
  * Creates a status bar item that triggers LaTeX Workshop's SyncTeX.
  */
 function activate(context) {
-  const item = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, 100);
+  // Lower priority moves it towards the right within the left-aligned group.
+  const item = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Left, -1000);
   item.text = "J";
   item.tooltip = "LaTeX Workshop: 从光标同步SyncTex";
 
