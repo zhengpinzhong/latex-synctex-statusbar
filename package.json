@@ -1,0 +1,16 @@
+{
+  "name": "cursor-latex-synctex-statusbar",
+  "displayName": "LaTeX Workshop Synctex StatusBar",
+  "description": "Adds a Status Bar button for LaTeX Workshop SyncTeX (from cursor).",
+  "version": "0.0.3",
+  "publisher": "zpz",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "scripts": {}
+}
+
