@@ -8,21 +8,17 @@
 
 ## 已经做了什么
 
-1. 创建了一个很小的 Cursor/VS Code 扩展（本地扩展）。
-2. 扩展启动后在状态栏左侧创建一个按钮：
-   - 按钮显示内容：大写 `J`
-   - 点击行为：触发 LaTeX Workshop 命令 `latex-workshop.synctex`
-   - 悬停提示(tooltip)：`LaTeX Workshop: 从光标同步SyncTex`
+1. 创建了一个很小的 Cursor/VS Code 扩展。
+2. 在状态栏左侧显示按钮 `J`，并且只在当前编辑器打开的是 `.tex` / LaTeX 文件时显示。
+3. 点击按钮执行 LaTeX Workshop 的命令 `latex-workshop.synctex`。
+4. 若未安装 LaTeX Workshop（`James-Yu.latex-workshop`），点击按钮会弹出提示并提供安装页面。
 
-## 将要做什么
+## 安装与使用
 
-1. 规范化扩展信息（让它更容易发布到公开平台）：
-   - 在 `package.json` 补全 `repository` / `license` / `icon` 等信息
-   - 调整 `engines.vscode` 为更合适的版本范围
-2. 从“本地扩展”升级为“可发布扩展”：
-   - 使用 `vsce`（VS Code Extension tool）生成 `.vsix`
-   - 发布到你选择的平台（VS Marketplace 或 OpenVSX）
-3.（可选）进一步改进体验：
-   - 让按钮在未安装 LaTeX Workshop 时给出提示（目前假设命令可用）
-   - 提供更友好的显示文本（例如 `Synctex`）或可配置按钮文案
+1. 建议先安装 LaTeX Workshop（`James-Yu.latex-workshop`）。
+2. 打开一个 `.tex` / LaTeX 文件后，状态栏左侧会显示按钮 `J`（非 LaTeX 文件时会隐藏）。
+3. 点击按钮：已安装则执行 `latex-workshop.synctex`；未安装则弹出提示并提供安装入口。
+
+## 发布说明
+项目已补齐 `package.json` 中用于公开发布的元信息（`repository` / `license` / `icon` / `contributes` / `files` 等），并提供 `vsce package` 用于生成发行用 `.vsix`。
 

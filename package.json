@@ -2,16 +2,52 @@
   "name": "cursor-latex-synctex-statusbar",
   "displayName": "LaTeX Workshop Synctex StatusBar",
   "description": "Adds a Status Bar button for LaTeX Workshop SyncTeX (from cursor).",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "publisher": "zpz",
+  "icon": "icon.svg",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhengpinzhong/latex-synctex-statusbar.git"
+  },
+  "homepage": "https://github.com/zhengpinzhong/latex-synctex-statusbar",
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "latex",
+    "synctex",
+    "latex-workshop",
+    "cursor",
+    "statusbar"
+  ],
   "engines": {
     "vscode": "^1.96.0"
   },
   "main": "./extension.js",
   "activationEvents": [
     "onLanguage:latex",
-    "onLanguage:tex"
+    "onLanguage:tex",
+    "onCommand:cursor-latex-synctex-statusbar.synctex"
   ],
-  "scripts": {}
+  "contributes": {
+    "commands": [
+      {
+        "command": "cursor-latex-synctex-statusbar.synctex",
+        "title": "LaTeX Workshop: SyncTeX from cursor",
+        "category": "LaTeX"
+      }
+    ]
+  },
+  "files": [
+    "extension.js",
+    "package.json",
+    "README.md",
+    "LICENSE",
+    "icon.svg"
+  ],
+  "scripts": {
+    "package": "vsce package"
+  }
 }
 
